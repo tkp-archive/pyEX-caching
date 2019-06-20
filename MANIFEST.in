@@ -1,0 +1,4 @@
+prune tests
+prune docs
+
+include requirements.txt
