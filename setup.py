@@ -13,11 +13,11 @@ with open(path.join(here, 'requirements.txt'), encoding='utf-8') as f:
 
 setup(
     name='pyEX-caching',
-    version='0.0.1',
+    version='0.0.2',
     description='Rest API to IEX',
     long_description=long_description,
     url='https://github.com/timkpaine/pyEX-caching',
-    download_url='https://github.com/timkpaine/pyEX-caching/archive/v0.0.1.tar.gz',
+    download_url='https://github.com/timkpaine/pyEX-caching/archive/v0.0.2.tar.gz',
     author='Tim Paine',
     author_email='timothy.k.paine@gmail.com',
     license='Apache 2.0',
