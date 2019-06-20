@@ -1,22 +1,22 @@
 tests: ## Clean and Make unit tests
-	python3 -m pytest -v tests --cov=pyEX
+	python3 -m pytest -v tests --cov=pyEXcaching
 
 test: lint ## run the tests for travis CI
-	@ python3 -m pytest -v tests --cov=pyEX
+	@ python3 -m pytest -v tests --cov=pyEXcaching
 
 lint: ## run linter
-	flake8 pyEX 
+	flake8 pyEXcaching 
 
 annotate: ## MyPy type annotation check
-	mypy -s pyEX
+	mypy -s pyEXcaching
 
 annotate_l: ## MyPy type annotation check - count only
-	mypy -s pyEX | wc -l 
+	mypy -s pyEXcaching | wc -l 
 
 clean: ## clean the repository
 	find . -name "__pycache__" | xargs  rm -rf 
 	find . -name "*.pyc" | xargs rm -rf 
-	rm -rf .coverage cover htmlcov logs build dist *.egg-info
+	rm -rf .coverage cover htmlcov logs build dist *.egg-info coverage.xml
 	make -C ./docs clean
 	rm -rf ./docs/*.*.rst  # generated
 

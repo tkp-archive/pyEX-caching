@@ -16,7 +16,7 @@ setup(
     version='0.0.1',
     description='Rest API to IEX',
     long_description=long_description,
-    url='https://github.com/timkpaine/pyEX',
+    url='https://github.com/timkpaine/pyEX-caching',
     download_url='https://github.com/timkpaine/pyEX-caching/archive/v0.0.1.tar.gz',
     author='Tim Paine',
     author_email='timothy.k.paine@gmail.com',
