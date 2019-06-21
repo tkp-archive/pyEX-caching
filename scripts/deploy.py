@@ -14,7 +14,7 @@ def main(version, repourl):
     ROOT_DIR = abspath(join(SCRIPT_DIR, ".."))
     SETUP_IN = abspath(join(ROOT_DIR, "setup.py.in"))
     SETUP_OUT = abspath(join(ROOT_DIR, "setup.py"))
-    VERSION_OUT = abspath(join(ROOT_DIR, "pyEXcaching", "_version.py"))
+    VERSION_OUT = abspath(join(ROOT_DIR, "pyEX", "caching", "_version.py"))
 
     DOCS_CONF_IN = abspath(join(ROOT_DIR, "docs", "conf.py.in"))
     DOCS_CONF_OUT = abspath(join(ROOT_DIR, "docs", "conf.py"))
