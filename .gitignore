@@ -107,3 +107,4 @@ docs/api
 keys.sh
 
 pyEX/*.py
+pyEX/marketdata
