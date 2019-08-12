@@ -174,7 +174,7 @@ texinfo_documents = [
 
 def run_apidoc(_):
     out_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), 'api'))
-    pyEXcaching_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'pyEXcaching'))
+    pyEXcaching_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'pyEX'))
     cmd_path = 'sphinx-apidoc'
     if hasattr(sys, 'real_prefix'):  # Check to see if we are in a virtualenv
         # If we are, assemble the path manually

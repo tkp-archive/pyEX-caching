@@ -4,4 +4,4 @@ API
 .. toctree::
    :maxdepth: 4
 
-   api/pyEXcaching.rst
+   api/pyEX.caching.rst
