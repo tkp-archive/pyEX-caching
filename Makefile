@@ -1,17 +1,17 @@
 tests: ## Clean and Make unit tests
-	python3 -m pytest -v tests --cov=pyEXcaching
+	python3 -m pytest -v tests --cov=pyEX.caching
 
 test: lint ## run the tests for travis CI
-	@ python3 -m pytest -v tests --cov=pyEXcaching
+	@ python3 -m pytest -v tests --cov=pyEX.caching
 
 lint: ## run linter
-	flake8 pyEXcaching 
+	flake8 pyEX/caching 
 
 annotate: ## MyPy type annotation check
-	mypy -s pyEXcaching
+	mypy -s pyEX/caching
 
 annotate_l: ## MyPy type annotation check - count only
-	mypy -s pyEXcaching | wc -l 
+	mypy -s pyEX/caching | wc -l 
 
 clean: ## clean the repository
 	find . -name "__pycache__" | xargs  rm -rf 

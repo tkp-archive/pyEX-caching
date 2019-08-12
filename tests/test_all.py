@@ -1,2 +1,2 @@
 # for Coverage
-from pyEXcaching import *
+from pyEX.caching import *
