@@ -7,6 +7,9 @@ test: lint ## run the tests for travis CI
 lint: ## run linter
 	flake8 pyEXcaching 
 
+fix:  ## run autopep8/tslint fix
+	autopep8 --in-place -r -a -a pyEXcaching/
+
 annotate: ## MyPy type annotation check
 	mypy -s pyEXcaching
 
