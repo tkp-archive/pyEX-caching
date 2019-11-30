@@ -8,7 +8,7 @@ lint: ## run linter
 	flake8 pyEXcaching 
 
 fix:  ## run autopep8/tslint fix
-	autopep8 --in-place -r -a -a pyEXcaching/
+	autopep8 --in-place -r -a -a pyEX/caching/
 
 annotate: ## MyPy type annotation check
 	mypy -s pyEXcaching

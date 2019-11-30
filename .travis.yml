@@ -23,6 +23,8 @@ addons:
 
 install: 
   - python3 -m pip install -r requirements.txt && python3 -m pip install -e .[dev]
+    - python3 -m pip install -U --target=`pwd` --no-deps pyEX  # install latest pyEX base
+    - git checkout pyEX/caching # the above install clobbers source, so restore
 
 script: make test
 
