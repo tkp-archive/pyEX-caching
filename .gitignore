@@ -105,3 +105,6 @@ docs/api
 
 .autoversion
 keys.sh
+
+pyEX/*.py
+pyEX/marketdata

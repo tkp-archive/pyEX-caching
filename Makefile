@@ -1,20 +1,23 @@
+prebuild:  ## Copy assets from pyEX
+	cp -r ../pyEX/pyEX/* ./pyEX/
+
 tests: ## Clean and Make unit tests
-	python3 -m pytest -v tests --cov=pyEXcaching
+	python3 -m pytest -v tests --cov=pyEX.caching
 
 test: lint ## run the tests for travis CI
-	@ python3 -m pytest -v tests --cov=pyEXcaching
+	@ python3 -m pytest -v tests --cov=pyEX.caching
 
 lint: ## run linter
-	flake8 pyEXcaching 
+	flake8 pyEX/caching 
 
 fix:  ## run autopep8/tslint fix
 	autopep8 --in-place -r -a -a pyEX/caching/
 
 annotate: ## MyPy type annotation check
-	mypy -s pyEXcaching
+	mypy pyEX/caching
 
 annotate_l: ## MyPy type annotation check - count only
-	mypy -s pyEXcaching | wc -l 
+	mypy pyEX/caching | wc -l 
 
 clean: ## clean the repository
 	find . -name "__pycache__" | xargs  rm -rf 
@@ -22,6 +25,8 @@ clean: ## clean the repository
 	rm -rf .coverage cover htmlcov logs build dist *.egg-info coverage.xml
 	make -C ./docs clean
 	rm -rf ./docs/*.*.rst  # generated
+	rm -rf pyEX/*.py
+	rm -rf pyEX/marketdata
 
 docs:  ## make documentation
 	make -C ./docs html
@@ -40,7 +45,10 @@ major:  ## steps before dist, defaults to previous tag + one micro
 	. scripts/deploy.sh MAJOR
 
 dist:  ## dist to pypi
-	python3 setup.py sdist upload -r pypi
+	rm -rf dist build
+	python3 setup.py sdist
+	python3 setup.py bdist_wheel
+	twine check dist/* && twine upload dist/*
 
 # Thanks to Francoise at marmelab.com for this
 .DEFAULT_GOAL := help

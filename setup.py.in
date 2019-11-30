@@ -15,6 +15,7 @@ setup(
     version='{{VERSION}}',
     description='Rest API to IEX',
     long_description=long_description,
+    long_description_content_type='text/markdown',
     url='{{REPO_URL}}',
     download_url='{{REPO_URL}}/archive/v{{VERSION}}.tar.gz',
     author='Tim Paine',
@@ -34,5 +35,6 @@ setup(
     keywords='finance data',
     packages=['pyEX.caching'],
     install_requires=requires,
+    package_dir={'pyEX.caching': 'pyEX/caching'},
     extras_require={'dev': requires + ['pytest', 'pytest-cov', 'pylint', 'flake8', 'mock', 'autopep8', 'codecov']}
 )

@@ -7,7 +7,7 @@ From Pip
 
 .. code:: bash
 
-    pip install pyEX
+    pip install pyEX.caching
 
 From Source
 ============
