@@ -4,9 +4,6 @@ prebuild:  ## Copy assets from pyEX
 tests: ## Clean and Make unit tests
 	python3 -m pytest -v tests --cov=pyEX.caching
 
-test: lint ## run the tests for travis CI
-	@ python3 -m pytest -v tests --cov=pyEX.caching
-
 lint: ## run linter
 	flake8 pyEX/caching 
 

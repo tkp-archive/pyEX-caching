@@ -25,7 +25,9 @@ install:
   - python3 -m pip install -U --target=`pwd` --no-deps pyEX  # install latest pyEX base
   - git checkout pyEX/caching # the above install clobbers source, so restore
 
-script: make test
+script:
+  - make tests
+  - make lint
 
 after_success:
     - codecov --token f83b766b-652a-4ddc-858a-a94390c19046
