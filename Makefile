@@ -2,7 +2,7 @@ prebuild:  ## Copy assets from pyEX
 	cp -r ../pyEX/pyEX/* ./pyEX/
 
 tests: ## Clean and Make unit tests
-	python3 -m pytest -v tests --cov=pyEX.caching
+	python3 -m pytest -v pyEX/caching/tests --cov=pyEX.caching
 
 lint: ## run linter
 	flake8 pyEX/caching 
