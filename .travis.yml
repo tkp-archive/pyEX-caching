@@ -14,11 +14,14 @@ addons:
       - ubuntu-toolchain-r-test
     packages:
       - graphviz
+      - snappy-dev
+
   homebrew:
     update: true
     packages:
       - python
       - graphviz
+      - snappy
 
 install: 
   - python3 -m pip install -e .[dev]
