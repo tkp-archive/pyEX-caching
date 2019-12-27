@@ -1,2 +1,4 @@
 # for Coverage
-from pyEX.caching import *
+from ..__init__ import *
+from ..__init__ import Storage
+from .._version import *
