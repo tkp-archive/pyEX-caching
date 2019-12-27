@@ -108,3 +108,4 @@ keys.sh
 
 pyEX/*.py
 pyEX/marketdata
+pystore/
