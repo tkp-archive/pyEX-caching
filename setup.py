@@ -21,8 +21,20 @@ version = get_version(pjoin(here, 'pyEX', 'caching', '_version.py'))
 with open(pjoin(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
-with open(pjoin(here, 'requirements.txt'), encoding='utf-8') as f:
-    requires = f.read().split()
+requires = [
+    'pyEX>=0.1.15',
+    'pystore>=0.1.15',
+]
+
+requires_dev = [
+    'flake8>=3.7.8',
+    'fsspec>=0.3.3',  # for pystore
+    'mock',
+    'pytest>=4.3.0',
+    'pytest-cov>=2.6.1',
+    'Sphinx>=1.8.4',
+    'sphinx-markdown-builder>=0.5.2',
+] + requires
 
 setup(
     name=name,
@@ -47,5 +59,7 @@ setup(
     zip_safe=False,
     packages=['pyEX.caching'],
     install_requires=requires,
-    extras_require={'dev': requires + ['pytest', 'pytest-cov', 'pylint', 'flake8', 'codecov', 'bumpversion', 'mock']}
+    extras_require={
+        'dev': requires_dev,
+    },
 )
