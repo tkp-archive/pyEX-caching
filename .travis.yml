@@ -19,7 +19,6 @@ addons:
     packages:
       - python
       - graphviz
-      - python2
 
 install: 
   - python3 -m pip install -e .[dev]
