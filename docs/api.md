@@ -1,6 +1,6 @@
 ```eval_rst
 
-.. automodule::pyEX.caching
+.. automodule:: pyEX.caching
    :members:
    :undoc-members:
    :show-inheritance:
