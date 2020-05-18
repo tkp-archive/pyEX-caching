@@ -3,7 +3,6 @@ Library for caching and querying IEX market and reference data using either SQLA
 
 [![Build Status](https://travis-ci.org/timkpaine/pyEX-caching.svg?branch=master)](https://travis-ci.org/timkpaine/pyEX-caching)
 [![Coverage](https://codecov.io/gh/timkpaine/pyEX-caching/branch/master/graph/badge.svg)](https://codecov.io/gh/timkpaine/pyEX-caching)
-[![BCH compliance](https://bettercodehub.com/edge/badge/timkpaine/pyEX-caching?branch=master)](https://bettercodehub.com/)
 [![License](https://img.shields.io/github/license/timkpaine/pyEX-caching.svg)](https://pypi.python.org/pypi/pyEX-caching/)
 [![PyPI](https://img.shields.io/pypi/v/pyEX-caching.svg)](https://pypi.python.org/pypi/pyEX-caching/)
 [![Docs](https://readthedocs.org/projects/pyex/badge/?version=latest)](https://pyex.readthedocs.io/en/latest/?badge=latest)
