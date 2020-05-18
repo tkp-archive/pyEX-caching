@@ -2,10 +2,10 @@ prebuild:  ## Copy assets from pyEX
 	cp -r ../pyEX/pyEX/* ./pyEX/
 
 tests: ## Clean and Make unit tests
-	python3 -m pytest -v pyEX/caching/tests --cov=pyEX
+	python3.7 -m pytest -v pyEX/caching/tests --cov=pyEX
 
 lint: ## run linter
-	flake8 pyEX/caching 
+	python3.7 -m flake8 pyEX/caching 
 
 fix:  ## run autopep8/tslint fix
 	autopep8 --in-place -r -a -a pyEX/caching/
@@ -34,8 +34,8 @@ install:  ## install to site-packages
 
 dist:  ## dist to pypi
 	rm -rf dist build
-	python3 setup.py sdist
-	python3 setup.py bdist_wheel
+	python3.7 setup.py sdist
+	python3.7 setup.py bdist_wheel
 	twine check dist/* && twine upload dist/*
 
 # Thanks to Francoise at marmelab.com for this
