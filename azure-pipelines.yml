@@ -18,11 +18,15 @@ jobs:
       displayName: 'Use Python $(python.version)'
 
     - script: |
+        apt-get install libsnappy-dev
+      displayName: "Install system dependencies"
+
+    - script: |
         python -m pip install --upgrade pip
         pip install -e .[dev]
         python -m pip install -U --target=`pwd` --no-deps pyEX  # install latest pyEX base
         git checkout pyEX/caching # the above install clobbers source, so restore
-      displayName: 'Install dependencies'
+      displayName: 'Install python dependencies'
 
     - script: |
         make lint
@@ -59,11 +63,15 @@ jobs:
       displayName: 'Use Python $(python.version)'
 
     - script: |
+        brew install snappy
+      displayName: "Install system dependencies"
+
+    - script: |
         python -m pip install --upgrade pip
         pip install -e .[dev]
         python -m pip install -U --target=`pwd` --no-deps pyEX  # install latest pyEX base
         git checkout pyEX/caching # the above install clobbers source, so restore
-      displayName: 'Install dependencies'
+      displayName: 'Install python dependencies'
 
     - script: |
         make lint
